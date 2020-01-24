@@ -5,9 +5,7 @@ pipeline {
         DOCKER_IMAGE_NAME = "lexarflash8g/train-schedule"
     }
     
-    script {
-System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS", "True");
- }
+   
     stages {
         stage('Build') {
             steps {
