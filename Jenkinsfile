@@ -2,8 +2,12 @@ pipeline {
     agent any
     environment {
         //be sure to replace "willbla" with your own Docker Hub username
-        DOCKER_IMAGE_NAME = "willbla/train-schedule"
+        DOCKER_IMAGE_NAME = "lexarflash8g/train-schedule"
     }
+    
+    script {
+System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.LAUNCH_DIAGNOSTICS", "True");
+ }
     stages {
         stage('Build') {
             steps {
